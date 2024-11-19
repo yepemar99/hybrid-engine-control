@@ -1,0 +1,1107 @@
+[
+    {
+        "id": "a8c8deecb42918ef",
+        "type": "tab",
+        "label": "Data Simulator",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e0a10a74c01ec01b",
+        "type": "tab",
+        "label": "Data Subscription and Transmission",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "500a7756243457a6",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b6a3f57cadf58202",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2926da7de03df86c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "30646e90c1fe6e73",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "cb055771aae22f9e",
+        "type": "ui_group",
+        "name": "Indicators",
+        "tab": "30646e90c1fe6e73",
+        "order": 1,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d49e2c807adb9ed",
+        "type": "ui_group",
+        "name": "Actions",
+        "tab": "30646e90c1fe6e73",
+        "order": 2,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "786eafdfd93b95f8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt://localhost",
+        "port": "1884",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "967babdc5174e7a2",
+        "type": "ui_group",
+        "name": "Alerts",
+        "tab": "30646e90c1fe6e73",
+        "order": 3,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "138fac7111016bba",
+        "type": "inject",
+        "z": "a8c8deecb42918ef",
+        "name": "Fuel Tank Level",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "hybridenginecontrol/fueltanklevel",
+        "payload": "{\"id\":\"fueltanklevel\",\"name\":\"Fuel Tank Level\",\"value\":0}",
+        "payloadType": "json",
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "fdc720fad6355bb5"
+            ]
+        ]
+    },
+    {
+        "id": "fdc720fad6355bb5",
+        "type": "function",
+        "z": "a8c8deecb42918ef",
+        "name": "simulateFuelTankLevel ",
+        "func": "msg.payload.value = Math.floor(Math.random() * 55)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 160,
+        "wires": [
+            [
+                "96dae5be92237446"
+            ]
+        ]
+    },
+    {
+        "id": "96dae5be92237446",
+        "type": "mqtt out",
+        "z": "a8c8deecb42918ef",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b6a3f57cadf58202",
+        "x": 890,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "eaaf74ae0ed851cc",
+        "type": "inject",
+        "z": "a8c8deecb42918ef",
+        "name": "Battery Charge Level",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "hybridenginecontrol/batterychargelevel",
+        "payload": "{\"id\":\"batterychargelevel\",\"name\":\"Battery Charge Level\",\"value\":0}",
+        "payloadType": "json",
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "1e9b85d4fcfb3834"
+            ]
+        ]
+    },
+    {
+        "id": "1e9b85d4fcfb3834",
+        "type": "function",
+        "z": "a8c8deecb42918ef",
+        "name": "simulateChargeBatteryLevel ",
+        "func": "msg.payload.value = Math.floor(Math.random() * 100)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 220,
+        "wires": [
+            [
+                "96dae5be92237446"
+            ]
+        ]
+    },
+    {
+        "id": "171368e551338112",
+        "type": "inject",
+        "z": "a8c8deecb42918ef",
+        "name": "Speed",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "hybridenginecontrol/speed",
+        "payload": "{\"id\":\"speed\",\"name\":\"Speed\",\"value\":0}",
+        "payloadType": "json",
+        "x": 240,
+        "y": 280,
+        "wires": [
+            [
+                "9e6d6cb0dafd3f05"
+            ]
+        ]
+    },
+    {
+        "id": "9e6d6cb0dafd3f05",
+        "type": "function",
+        "z": "a8c8deecb42918ef",
+        "name": "simulateSpeedLevel ",
+        "func": "msg.payload.value = Math.floor(Math.random() * 240)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "96dae5be92237446"
+            ]
+        ]
+    },
+    {
+        "id": "5f06c7803dfeead6",
+        "type": "inject",
+        "z": "a8c8deecb42918ef",
+        "name": "Power",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "hybridenginecontrol/power",
+        "payload": "{\"id\":\"power\",\"name\":\"power\",\"value\":0}",
+        "payloadType": "json",
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "9fd918cb21d038e6"
+            ]
+        ]
+    },
+    {
+        "id": "9fd918cb21d038e6",
+        "type": "function",
+        "z": "a8c8deecb42918ef",
+        "name": "simulatePowerLevel ",
+        "func": "msg.payload.value = Math.floor(Math.random() * 300 )\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 340,
+        "wires": [
+            [
+                "96dae5be92237446"
+            ]
+        ]
+    },
+    {
+        "id": "2a161cf7e469cd75",
+        "type": "mqtt in",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "topic": "hybridenginecontrol/fueltanklevel",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b6a3f57cadf58202",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "5d53d8b98458decd"
+            ]
+        ]
+    },
+    {
+        "id": "5d53d8b98458decd",
+        "type": "http request",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8484/hybridenginecontrol/sensors/fueltanklevel",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66cbcaefb6b4d42e",
+        "type": "mqtt in",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "topic": "hybridenginecontrol/batterychargelevel",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b6a3f57cadf58202",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "bff8d8af335df0eb"
+            ]
+        ]
+    },
+    {
+        "id": "bff8d8af335df0eb",
+        "type": "http request",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8484/hybridenginecontrol/sensors/batterychargelevel",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f36df96e94662151",
+        "type": "mqtt in",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "topic": "hybridenginecontrol/speed",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b6a3f57cadf58202",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "27ca1e21b27e766d"
+            ]
+        ]
+    },
+    {
+        "id": "27ca1e21b27e766d",
+        "type": "http request",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8484/hybridenginecontrol/sensors/speed",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f181eddde31e1149",
+        "type": "mqtt in",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "topic": "hybridenginecontrol/power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b6a3f57cadf58202",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "1a003ed291fdc0b4"
+            ]
+        ]
+    },
+    {
+        "id": "d353cc5d56477dfd",
+        "type": "mqtt in",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "topic": "hybridenginecontrol/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b6a3f57cadf58202",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 400,
+        "wires": [
+            [
+                "627112aa96e88f79"
+            ]
+        ]
+    },
+    {
+        "id": "627112aa96e88f79",
+        "type": "http request",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8484/hybridenginecontrol/mode",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a003ed291fdc0b4",
+        "type": "http request",
+        "z": "e0a10a74c01ec01b",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:8484/hybridenginecontrol/sensors/power",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a59f03c5bcdd0401",
+        "type": "ui_template",
+        "z": "500a7756243457a6",
+        "group": "cb055771aae22f9e",
+        "name": "Battery Charge Level",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "format": "<div style=\"text-align: center;\">\n    <!-- Título en negrita con margen adicional -->\n    <div style=\"font-weight: 500; font-size: 19.2px; margin-bottom: 70px; margin-top: 8px;\">Battery Level</div>\n\n    <!-- Contenedor del indicador de batería -->\n    <div style=\"display: inline-block; position: relative;\">\n        <!-- Parte superior de la batería (simulación del terminal) -->\n        <div id=\"battery-terminal\"\n            style=\"width: 20px; height: 8px; background-color: #333; margin: 0 auto; border-radius: 2px;\"></div>\n\n        <!-- Contenedor de la batería principal -->\n        <div id=\"battery-container\"\n            style=\"width: 50px; height: 100px; border: 2px solid #333; border-radius: 5px; position: relative; margin-top: 4px;\">\n            <!-- Nivel de la batería -->\n            <div id=\"battery-level\"\n                style=\"width: 100%; height: 60%; background-color: #4caf50; position: absolute; bottom: 0; border-radius: 3px;\">\n            </div>\n            <!-- Indicador de porcentaje centrado -->\n            <div id=\"battery-percentage\"\n                style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; color: #333;\">\n                10%\n            </div>\n        </div>\n    </div>\n</div>\n\n<script>\n    (function(scope) {\n        scope.$watch('msg.payload', function(batteryLevel) {\n            // Verifica si el valor de batteryLevel es un string numérico y conviértelo en un número\n            if (typeof batteryLevel === 'string' && !isNaN(batteryLevel)) {\n                batteryLevel = parseFloat(batteryLevel); // Convierte a número\n            }\n\n            // Limita el valor entre 0 y 100 y verifica que sea un número\n            if (typeof batteryLevel === 'number') {\n                batteryLevel = Math.max(0, Math.min(100, batteryLevel)); \n\n                // Actualiza la altura y color de la batería\n                let batteryLevelDiv = document.getElementById(\"battery-level\");\n                let batteryPercentageText = document.getElementById(\"battery-percentage\");\n\n                // Ajusta la altura de acuerdo con el nivel de batería\n                batteryLevelDiv.style.height = batteryLevel + \"%\"; \n                batteryPercentageText.textContent = batteryLevel + \"%\"; \n\n                // Cambia el color según el nivel de carga\n                if (batteryLevel >= 60) {\n                    batteryLevelDiv.style.backgroundColor = \"#4caf50\"; // Verde\n                } else if (batteryLevel >= 20 && batteryLevel < 60) {\n                    batteryLevelDiv.style.backgroundColor = \"#ffeb3b\"; // Amarillo\n                } else {\n                    batteryLevelDiv.style.backgroundColor = \"#f44336\"; // Rojo\n                }\n            }\n        });\n    })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 780,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7843f675f71486f",
+        "type": "ui_gauge",
+        "z": "500a7756243457a6",
+        "name": "",
+        "group": "cb055771aae22f9e",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Speed",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "240",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c33e33131bc91c58",
+        "type": "ui_template",
+        "z": "500a7756243457a6",
+        "group": "cb055771aae22f9e",
+        "name": "Power",
+        "order": 4,
+        "width": 6,
+        "height": 6,
+        "format": "<!DOCTYPE html>\n<html lang=\"es\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Gráfica en Forma de Anillo</title>\n    <style>\n        /* Contenedor para centrar el anillo */\n        .ring-chart-container {\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            margin: auto;\n            height: 150px;\n            width: 150px;\n        }\n\n        /* SVG que contiene el anillo */\n        .ring-chart {\n            width: 150px;\n            height: 150px;\n        }\n\n        /* Estilo del texto dentro del anillo */\n        .ring-chart-text {\n            fill: #333;\n            font-size: 4px;\n            font-weight: bold;\n            text-anchor: middle;\n            dominant-baseline: middle;\n        }\n    </style>\n</head>\n\n<body>\n    <!-- Título en negrita con margen adicional -->\n    <div style=\"text-align: center; font-weight: 500; font-size: 19.2px; margin-bottom: -20px; margin-top: 8px;\">Power\n    </div>\n    <div class=\"ring-chart-container\">\n        <!-- SVG del anillo -->\n        <svg class=\"ring-chart\" viewBox=\"0 0 36 36\">\n            <!-- Fondo del anillo -->\n            <circle cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke=\"#eee\" stroke-width=\"5\" />\n            <!-- Progreso del anillo -->\n            <circle class=\"ring-chart-progress\" cx=\"18\" cy=\"18\" r=\"15.5\" fill=\"none\" stroke-width=\"5\"\n                stroke-dasharray=\"0 100\" />\n\n            <!-- Texto del valor actual en el centro del anillo -->\n            <text x=\"18\" y=\"15\" class=\"ring-chart-text\" id=\"ring-chart-value\">0</text>\n            <!-- Texto de las unidades debajo del valor -->\n            <text x=\"18\" y=\"20\" class=\"ring-chart-text ring-chart-units\">Unidad</text>\n        </svg>\n    </div>\n\n    <script>\n        (function(scope) {\n            // Función para actualizar el valor y color del anillo\n            function updateRingChart(value, maxValue = 300) { // maxValue establecido en 150\n                const progressCircle = document.querySelector(\".ring-chart-progress\");\n                const valueText = document.getElementById(\"ring-chart-value\");\n\n                // Calcula el porcentaje y el dasharray para el progreso del anillo\n                const percentage = (value / maxValue) * 100;\n                const dashArrayValue = `${percentage} ${100 - percentage}`;\n\n                // Actualiza el dasharray para controlar el progreso visual\n                progressCircle.setAttribute(\"stroke-dasharray\", dashArrayValue);\n\n                // Actualiza el color del anillo según el porcentaje\n                let color;\n                if (percentage < 40) color = \"green\";\n                else if (percentage >= 40 && percentage <= 80) color = \"yellow\";\n                else color = \"red\";\n                progressCircle.setAttribute(\"stroke\", color);\n\n                // Actualiza el texto del valor en el centro del anillo\n                valueText.textContent = value;\n            }\n\n            // Observa cambios en el valor de msg.payload y actualiza el gráfico\n            scope.$watch('msg.payload', function(value) {\n                if (typeof value === 'string') value = parseFloat(value); // Convierte a número si es string\n                if (!isNaN(value)) updateRingChart(value); // Actualiza si el valor es un número válido\n            });\n        })(scope);\n    </script>\n\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 730,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e2a2f2d513a998f",
+        "type": "ui_template",
+        "z": "500a7756243457a6",
+        "group": "1d49e2c807adb9ed",
+        "name": "Status",
+        "order": 1,
+        "width": 12,
+        "height": 6,
+        "format": "<!DOCTYPE html>\n<html lang=\"es\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Status Component</title>\n    <style>\n        .status-container {\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n        }\n\n        .status-title {\n            font-weight: 500;\n            font-size: 19.2px;\n            margin-bottom: 10px;\n        }\n\n        .status-icon {\n            width: 80px;\n            height: 80px;\n            border-radius: 50%;\n            background-color: #e0e0e0;\n            border: 2px solid #e0e0e0;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            cursor: pointer;\n            transition: background-color 0.3s, border-color 0.3s;\n        }\n\n        .status-on .status-icon {\n            background-color: #d0e8ff;\n            border: 2px solid #2a6fb0;\n        }\n\n        .status-svg {\n            width: 50px;\n            height: 50px;\n            fill: none;\n            stroke: #555;\n            stroke-width: 2;\n            stroke-linecap: round;\n            stroke-linejoin: round;\n        }\n\n        .status-label {\n            margin-top: 10px;\n            font-size: 16px;\n            text-align: center;\n            font-weight: bold;\n        }\n    </style>\n</head>\n\n<body>\n    <!-- Título en negrita con margen adicional -->\n    <div style=\"text-align: center; font-weight: 500; font-size: 19.2px; margin-bottom: 30px; margin-top: 8px;\">Status\n    </div>\n    <div class=\"status-container\">\n        <div id=\"statusToggle\" class=\"status-icon\">\n            <!-- SVG se inserta dinámicamente aquí -->\n        </div>\n        <div id=\"statusLabel\" class=\"status-label\">Off</div>\n    </div>\n\n    <script>\n        const statusToggle = document.getElementById('statusToggle');\n        const statusLabel = document.getElementById('statusLabel');\n        let isOn = false;\n\n        function renderStatus() {\n            // Limpiar el contenido del contenedor de icono\n            statusToggle.innerHTML = '';\n\n            // Crear el SVG y establecer su contenido según el estado\n            const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');\n            svgElement.setAttribute('width', '24');\n            svgElement.setAttribute('height', '24');\n            svgElement.setAttribute('viewBox', '0 0 24 24');\n            svgElement.classList.add('status-svg');\n\n            if (isOn) {\n                svgElement.innerHTML = '<path d=\"M12 2v10\"/><path d=\"M18.4 6.6a9 9 0 1 1-12.77.04\"/>';\n                statusToggle.classList.remove('status-on');\n                statusLabel.textContent = 'Turn Off';\n            } else {\n                svgElement.innerHTML = '<path d=\"M18.36 6.64A9 9 0 0 1 20.77 15\"/><path d=\"M6.16 6.16a9 9 0 1 0 12.68 12.68\"/><path d=\"M12 2v4\"/><path d=\"m2 2 20 20\"/>';\n                statusToggle.classList.add('status-on');\n                statusLabel.textContent = 'Turn On';\n            }\n\n            // Insertar el SVG en el contenedor\n            statusToggle.appendChild(svgElement);\n        }\n\n        // Función para enviar una solicitud POST con el valor de isOn\n        function sendPostRequest() {\n            const url = 'http://localhost:8484/hybridenginecontrol/actions/enabled'; // Reemplaza con tu URL de destino\n            console.log('Enviando POST a:', url, 'con valor:', isOn); // Depuración\n\n            fetch(url, {\n                method: 'POST',\n                headers: {\n                    'Content-Type': 'application/json'\n                },\n                body: JSON.stringify({ value: isOn })\n            })\n            .then(response => {\n                if (!response.ok) {\n                    throw new Error('Error en la respuesta del servidor');\n                }\n                return response.json();\n            })\n            .then(data => {\n                console.log('Respuesta del servidor:', data);\n            })\n            .catch(error => {\n                console.error('Error al enviar la solicitud:', error);\n            });\n        }\n\n        // Alternar el estado al hacer clic en el contenedor y enviar solicitud POST\n        statusToggle.addEventListener('click', () => {\n            isOn = !isOn;\n            renderStatus();\n            sendPostRequest(); // Llamada a la función para enviar el valor actualizado\n        });\n\n        // Render inicial\n        renderStatus();\n    </script>\n\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 530,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6789cd54b2186a3a",
+        "type": "ui_template",
+        "z": "500a7756243457a6",
+        "group": "cb055771aae22f9e",
+        "name": "Modes",
+        "order": 5,
+        "width": 24,
+        "height": 6,
+        "format": "<!DOCTYPE html>\n<html lang=\"es\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Componentes de Motor</title>\n    <style>\n        /* Contenedor principal para los motores */\n        .motor-container {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            gap: 30px;\n            margin-top: 50px;\n        }\n\n        /* Estilo base para cada motor */\n        .motor {\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            cursor: pointer;\n            opacity: 0.9;\n        }\n\n        /* Figura circular para cada motor */\n        .motor-icon {\n            width: 80px;\n            height: 80px;\n            border-radius: 50%;\n            background-color: #e0e0e0;\n            border: 2px solid #e0e0e0;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            transition: background-color 0.3s, border-color 0.3s;\n        }\n\n        /* Estilo del texto encima de cada motor */\n        .motor-label {\n            margin-top: 10px;\n            font-size: 16px;\n            text-align: center;\n            font-weight: bold;\n        }\n\n        /* Estilos para los SVG con la clase motor-svg */\n        .motor-svg {\n            width: 50px;\n            height: 50px;\n            fill: none;\n            stroke: #555;\n            stroke-width: 2;\n            stroke-linecap: round;\n            stroke-linejoin: round;\n            transition: fill 0.3s;\n        }\n\n        /* Color activo para el fondo, borde y el relleno del SVG */\n        .motor.active .motor-icon {\n            background-color: #d0e8ff;\n            border-color: #2a6fb0;\n        }\n\n        .motor.active .motor-svg {\n            fill: #a8d1ff;\n            stroke: #555;\n        }\n    </style>\n</head>\n\n<body>\n    <div style=\"text-align: center; font-weight: 500; font-size: 19.2px; margin-bottom: -20px; margin-top: 8px;\">Modes\n    </div>\n    <div class=\"motor-container\">\n        <!-- Motor Eléctrico -->\n        <div class=\"motor\" id=\"electric-motor\">\n            <div class=\"motor-icon\">\n                <svg class=\"motor-svg\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n                    <path\n                        d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\" />\n                </svg>\n            </div>\n            <div class=\"motor-label\">Electric</div>\n        </div>\n\n        <!-- Motor Híbrido -->\n        <div class=\"motor\" id=\"hybrid-motor\">\n            <div class=\"motor-icon\">\n                <svg class=\"motor-svg\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n                    <path\n                        d=\"M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z\" />\n                    <circle cx=\"12\" cy=\"12\" r=\"3\" />\n                </svg>\n            </div>\n            <div class=\"motor-label\">Hybrid</div>\n        </div>\n\n        <!-- Motor de Combustión -->\n        <div class=\"motor\" id=\"combustion-motor\">\n            <div class=\"motor-icon\">\n                <svg class=\"motor-svg\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n                    <line x1=\"3\" y1=\"22\" x2=\"15\" y2=\"22\" />\n                    <line x1=\"4\" y1=\"9\" x2=\"14\" y2=\"9\" />\n                    <path d=\"M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18\" />\n                    <path d=\"M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5\" />\n                </svg>\n            </div>\n            <div class=\"motor-label\">Combustion</div>\n        </div>\n    </div>\n\n    <script>\n        (function(scope) {\n\n            function activateMotor(mode) {\n                // Remover la clase activa de todos los motores\n                document.querySelectorAll('.motor').forEach(motor => motor.classList.remove('active'));\n\n                // Activar el motor correspondiente según el valor de mode\n                if (mode === \"Electric\") {\n                    document.getElementById('electric-motor').classList.add('active');\n                } else if (mode === \"Hybrid\") {\n                    document.getElementById('hybrid-motor').classList.add('active');\n                } else if (mode === \"Combustion\") {\n                    document.getElementById('combustion-motor').classList.add('active');\n                }\n            }\n\n            scope.$watch('msg.payload', function(payload) {\n                \n                activateMotor(payload.mode);\n       \n            });\n\n        })(scope);\n    </script>\n\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 530,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82a76af98c3e5433",
+        "type": "ui_template",
+        "z": "500a7756243457a6",
+        "group": "1d49e2c807adb9ed",
+        "name": "Actions",
+        "order": 2,
+        "width": 12,
+        "height": 6,
+        "format": "<!DOCTYPE html>\n<html lang=\"es\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Botones de Acción</title>\n    <style>\n        /* Contenedor de los botones */\n        .button-container {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            gap: 20px;\n            margin-top: 50px;\n        }\n\n        /* Estilo de los botones */\n        .action-button {\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            padding: 10px 20px;\n            background-color: #e0e0e0;\n            border: 2px solid #e0e0e0;\n            border-radius: 8px;\n            cursor: pointer;\n            transition: background-color 0.3s, border-color 0.3s;\n        }\n\n        .action-button:hover {\n            background-color: #d0e8ff;\n            border-color: #2a6fb0;\n        }\n\n        /* Estilos del SVG */\n        .button-icon {\n            width: 24px;\n            height: 24px;\n            fill: none;\n            stroke: #555;\n            stroke-width: 2;\n            stroke-linecap: round;\n            stroke-linejoin: round;\n            margin-right: 4px;\n            /* Espacio entre ícono y texto */\n        }\n\n        /* Texto dentro del botón */\n        .button-label {\n            font-size: 16px;\n            font-weight: bold;\n            color: #333;\n        }\n    </style>\n</head>\n\n<body>\n    <div style=\"text-align: center; font-weight: 500; font-size: 19.2px; margin-bottom: 0px; margin-top: 8px;\">Actions\n    </div>\n    <div class=\"button-container\">\n        <!-- Botón 1 con ícono de combustible -->\n        <div class=\"action-button\" onclick=\"makePostRequest('http://localhost:8484/hybridenginecontrol/actions/emptytank')\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"\n                stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n                class=\"lucide lucide-ban-fuel button-icon\">\n                <!-- Bomba de combustible -->\n                <line x1=\"3\" x2=\"15\" y1=\"22\" y2=\"22\" />\n                <line x1=\"4\" x2=\"14\" y1=\"9\" y2=\"9\" />\n                <path d=\"M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18\" />\n                <path d=\"M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5\" />\n\n                <!-- Línea diagonal de prohibición en negro y sobre el ícono -->\n                <path d=\"M22 2L2 22\" stroke=\"#000000\" stroke-width=\"3\" />\n            </svg>\n            <span class=\"button-label\">Empty The Tank</span>\n        </div>\n\n        <!-- Botón 2 con ícono de rayo tachado -->\n        <div class=\"action-button\" onclick=\"makePostRequest('http://localhost:8484/hybridenginecontrol/actions/drainbattery')\">\n            <svg class=\"button-icon\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">\n                <path d=\"M10.513 4.856 13.12 2.17a.5.5 0 0 1 .86.46l-1.377 4.317\" />\n                <path d=\"M15.656 10H20a1 1 0 0 1 .78 1.63l-1.72 1.773\" />\n                <path\n                    d=\"M16.273 16.273 10.88 21.83a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14H4a1 1 0 0 1-.78-1.63l4.507-4.643\" />\n                <path d=\"m2 2 20 20\" />\n            </svg>\n            <span class=\"button-label\">Drain The Battery</span>\n        </div>\n    </div>\n\n    <script>\n        function makePostRequest(url) {\n            fetch(url, {\n                method: 'POST',\n                headers: {\n                    'Content-Type': 'application/json'\n                },\n                body: JSON.stringify({ message: 'Acción ejecutada' })\n            })\n            .then(response => {\n                if (response.ok) {\n                    alert('Solicitud POST exitosa');\n                } else {\n                    alert('Error en la solicitud POST');\n                }\n            })\n            .catch(error => {\n                console.error('Error en la solicitud POST:', error);\n            });\n        }\n    </script>\n\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 540,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cfd1a9259f6fa7a6",
+        "type": "ui_gauge",
+        "z": "500a7756243457a6",
+        "name": "Fuel Tank Level",
+        "group": "cb055771aae22f9e",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Fuel Tank Level",
+        "label": "Litros",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "55",
+        "colors": [
+            "#fa0000",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 760,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "6210ead36b72e2b7",
+        "type": "mqtt in",
+        "z": "500a7756243457a6",
+        "name": "",
+        "topic": "hybridenginecontrol/sensors/fueltanklevel",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "786eafdfd93b95f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 60,
+        "wires": [
+            [
+                "5cdc2b2d746eaeb9",
+                "a0877cd3e8628bb8",
+                "ab9a986dec586548"
+            ]
+        ]
+    },
+    {
+        "id": "0a7b16a2bddb6070",
+        "type": "mqtt in",
+        "z": "500a7756243457a6",
+        "name": "",
+        "topic": "hybridenginecontrol/sensors/batterychargelevel",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "786eafdfd93b95f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 240,
+        "wires": [
+            [
+                "1fb42f802456e467",
+                "cadb133ace1f8bf1"
+            ]
+        ]
+    },
+    {
+        "id": "92c7cfdd1e771462",
+        "type": "mqtt in",
+        "z": "500a7756243457a6",
+        "name": "",
+        "topic": "hybridenginecontrol/sensors/speed",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "786eafdfd93b95f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 440,
+        "wires": [
+            [
+                "88e595f5d2fc370b"
+            ]
+        ]
+    },
+    {
+        "id": "5ef8c2c6477ef8bb",
+        "type": "mqtt in",
+        "z": "500a7756243457a6",
+        "name": "",
+        "topic": "hybridenginecontrol/sensors/power",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "786eafdfd93b95f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 500,
+        "wires": [
+            [
+                "d2eda35404e7f84b"
+            ]
+        ]
+    },
+    {
+        "id": "4a727081ea9836e4",
+        "type": "mqtt in",
+        "z": "500a7756243457a6",
+        "name": "",
+        "topic": "hybridenginecontrol/mode",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "786eafdfd93b95f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "6789cd54b2186a3a"
+            ]
+        ]
+    },
+    {
+        "id": "5cdc2b2d746eaeb9",
+        "type": "switch",
+        "z": "500a7756243457a6",
+        "name": "Get Notify",
+        "property": "payload.notify",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "5a54e859d6cb5021"
+            ]
+        ]
+    },
+    {
+        "id": "5a54e859d6cb5021",
+        "type": "ui_toast",
+        "z": "500a7756243457a6",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Fuel tank level low",
+        "name": "Fuel Tank Level Low",
+        "x": 780,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1fb42f802456e467",
+        "type": "switch",
+        "z": "500a7756243457a6",
+        "name": "Get Notify",
+        "property": "payload.notify",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 540,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af157e5168bcc3e2",
+        "type": "ui_template",
+        "z": "500a7756243457a6",
+        "group": "967babdc5174e7a2",
+        "name": "Alerts",
+        "order": 2,
+        "width": "24",
+        "height": "12",
+        "format": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Button with History Icon</title>\n    <style>\n        /* Estilo del botón */\n        .action-button {\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            gap: 8px;\n            padding: 10px 20px;\n            background-color: #e0e0e0;\n            border: 2px solid #e0e0e0;\n            border-radius: 8px;\n            cursor: pointer;\n            transition: background-color 0.3s, border-color 0.3s;\n            max-width: 400px;\n            margin: 20px auto;\n            width: 100%;\n        }\n\n        .action-button:hover {\n            background-color: #d0e8ff;\n            border-color: #2a6fb0;\n        }\n\n        /* Estilo del ícono del botón */\n        .button-icon {\n            width: 24px;\n            height: 24px;\n            fill: none;\n            stroke: #555;\n            stroke-width: 2;\n            stroke-linecap: round;\n            stroke-linejoin: round;\n        }\n\n        /* Texto del botón */\n        .button-label {\n            font-size: 16px;\n            font-weight: bold;\n            color: #333;\n        }\n\n        /* Estilo de la tabla */\n        .alerts-table {\n            width: 90%;\n            margin: 20px auto;\n            border-collapse: collapse;\n            display: none;\n            /* Ocultar inicialmente */\n        }\n\n        .alerts-table th,\n        .alerts-table td {\n            border: 1px solid #ddd;\n            padding: 8px;\n            text-align: left;\n        }\n\n        .alerts-table th {\n            background-color: #f4f4f4;\n            font-weight: bold;\n        }\n\n        .alerts-table tbody tr:hover {\n            background-color: #f9f9f9;\n        }\n\n        /* Estilo del ícono de eliminar */\n        .delete-icon {\n            cursor: pointer;\n            color: #d80000;\n            font-size: 16px;\n        }\n    </style>\n</head>\n\n<body>\n    <!-- Botón -->\n    <div class=\"action-button\" id=\"historyButton\" onclick=\"fetchHistory()\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"button-icon\" viewBox=\"0 0 24 24\">\n            <path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\" />\n            <path d=\"M3 3v5h5\" />\n            <path d=\"M12 7v5l4 2\" />\n        </svg>\n        <span class=\"button-label\">Get History</span>\n    </div>\n\n    <!-- Tabla -->\n    <table class=\"alerts-table\" id=\"alertsTable\">\n        <thead>\n            <tr>\n                <th>Name</th>\n                <th>Value</th>\n                <th>Alert</th>\n                <th>Date</th>\n                <th>Actions</th>\n            </tr>\n        </thead>\n        <tbody id=\"alertsTableBody\">\n            <!-- Filas dinámicas aquí -->\n        </tbody>\n    </table>\n\n    <script>\n        let isFirstFetch = true; // Para controlar el texto del botón\n\n        // Función para realizar el GET y actualizar la tabla\n        function fetchHistory() {\n            const url = 'http://localhost:8484/hybridenginecontrol/actions/history'; // URL de ejemplo\n            fetch(url)\n                .then(response => {\n                    if (response.ok) {\n                        return response.json();\n                    } else {\n                        throw new Error('Error fetching the data.');\n                    }\n                })\n                .then(data => {\n                    const alerts = data.alerts; // Obtener el arreglo de alertas\n                    if (alerts && alerts.length > 0) {\n                        populateTable(alerts); // Llenar la tabla\n                        document.getElementById('alertsTable').style.display = 'table'; // Mostrar tabla\n                        if (isFirstFetch) {\n                            document.querySelector('.button-label').textContent = 'Update History'; // Cambiar texto del botón\n                            isFirstFetch = false;\n                        }\n                    } else {\n                        alert('There are no alerts available.');\n                    }\n                })\n                .catch(error => {\n                    console.error('Error:', error);\n                    alert('Error fetching the data.');\n                });\n        }\n\n        // Función para llenar la tabla con datos\n        function populateTable(alerts) {\n            const tableBody = document.getElementById('alertsTableBody');\n            tableBody.innerHTML = ''; // Limpiar la tabla antes de llenarla\n\n            alerts.forEach(alert => {\n                const row = document.createElement('tr');\n\n                // Crear celdas\n                const nameCell = document.createElement('td');\n                nameCell.textContent = alert.name;\n\n                const valueCell = document.createElement('td');\n                valueCell.textContent = alert.value;\n\n                const alertCell = document.createElement('td');\n                alertCell.textContent = alert.alert;\n\n                const dateCell = document.createElement('td');\n                dateCell.textContent = alert.date;\n\n                const actionsCell = document.createElement('td');\n                const deleteIcon = document.createElement('span');\n                deleteIcon.textContent = '✖';\n                deleteIcon.className = 'delete-icon';\n                deleteIcon.onclick = () => {\n                    row.remove(); // Eliminar la fila\n                };\n                actionsCell.appendChild(deleteIcon);\n\n                // Agregar celdas a la fila\n                row.appendChild(nameCell);\n                row.appendChild(valueCell);\n                row.appendChild(alertCell);\n                row.appendChild(dateCell);\n                row.appendChild(actionsCell);\n\n                // Agregar fila al cuerpo de la tabla\n                tableBody.appendChild(row);\n            });\n        }\n    </script>\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 530,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0877cd3e8628bb8",
+        "type": "function",
+        "z": "500a7756243457a6",
+        "name": "Get Value",
+        "func": "msg.payload = msg.payload.value; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 60,
+        "wires": [
+            [
+                "cfd1a9259f6fa7a6"
+            ]
+        ]
+    },
+    {
+        "id": "cadb133ace1f8bf1",
+        "type": "function",
+        "z": "500a7756243457a6",
+        "name": "Get Value",
+        "func": "msg.payload = msg.payload.value; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 240,
+        "wires": [
+            [
+                "a59f03c5bcdd0401"
+            ]
+        ]
+    },
+    {
+        "id": "88e595f5d2fc370b",
+        "type": "function",
+        "z": "500a7756243457a6",
+        "name": "Get Value",
+        "func": "msg.payload = msg.payload.value; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 440,
+        "wires": [
+            [
+                "f7843f675f71486f"
+            ]
+        ]
+    },
+    {
+        "id": "d2eda35404e7f84b",
+        "type": "function",
+        "z": "500a7756243457a6",
+        "name": "Get Value",
+        "func": "msg.payload = msg.payload.value; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "c33e33131bc91c58"
+            ]
+        ]
+    },
+    {
+        "id": "ab9a986dec586548",
+        "type": "debug",
+        "z": "500a7756243457a6",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 180,
+        "wires": []
+    }
+]

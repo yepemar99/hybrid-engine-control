@@ -1,0 +1,42 @@
+{
+  "name": "Hybrid Engine Control",
+  "description": "Cualquier coas",
+  "port": 8484,
+  "status": false,
+  "mode": "Inactive",
+  "sensors": [
+    {
+      "id": "fueltanklevel",
+      "name": "Fuel Tank Level",
+      "description": "A carbon monoxide sensor.",
+      "unit": "L",
+      "value": 55,
+      "active": true
+    },
+    {
+      "id": "batterychargelevel",
+      "name": "Battery Charge Level",
+      "description": "A carbon monoxide sensor.",
+      "unit": "%",
+      "value": 100,
+      "active": true
+    },
+    {
+      "id": "speed",
+      "name": "Speed",
+      "description": "A carbon monoxide sensor.",
+      "unit": "km/h",
+      "value": 0,
+      "active": true
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "description": "A carbon monoxide sensor.",
+      "unit": "?",
+      "value": 0,
+      "active": true
+    }
+  ],
+  "alerts": []
+}
