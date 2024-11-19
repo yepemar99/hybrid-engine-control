@@ -2,60 +2,77 @@ var express = require("express"),
   router = express.Router();
 mqtt = require("../MQTTWebSockets");
 var resources = require("../resources/model");
-const basicStats = require("../utils/constants");
+const { getMode, getCurrentDateToString } = require("../utils/functions");
 
-router.route("/actions/enabled").post(function (req, res, next) {
+const actionsSensors = {
+  fueltanklevel: "fueltanklevel",
+  batterychargelevel: "batterychargelevel",
+  speed: "speed",
+  power: "power",
+};
+
+router.route("/actions/power").post(function (req, res, next) {
   var { value } = req.body;
   console.log("valor", value);
   resources.status = value;
   res.status(200).json(`Vehicle is ${resources.status ? "On" : "Off"}`);
 });
 
-router.route("/actions/emptytank").post(function (req, res, next) {
-  if (resources.sensors.length > 0) {
-    resources.sensors[0] = { ...resources.sensors[0], value: 0, active: false };
+router.route("/actions/sensors/:id").post(function (req, res, next) {
+  const id = req.params.id;
+  var { isEmpty } = req.body;
+  let isNotify = isEmpty;
+  let sendValue = 0;
+  let alertMsg = "";
+
+  switch (id) {
+    case actionsSensors.fueltanklevel:
+      {
+        resources.sensors[0] = {
+          ...resources.sensors[0],
+          value: isEmpty ? 0 : 55,
+          active: !isEmpty,
+        };
+        sendValue = isEmpty ? 0 : 55;
+        alertMsg = isEmpty ? "Fuel Tank Level is low" : "";
+      }
+      break;
+    case actionsSensors.batterychargelevel: {
+      resources.sensors[1] = {
+        ...resources.sensors[1],
+        value: isEmpty ? 0 : 100,
+        active: !isEmpty,
+      };
+      sendValue = isEmpty ? 0 : 100;
+      alertMsg = isEmpty ? "Battery charge Level is low" : "";
+      break;
+    }
   }
 
-  const newDate = new Date();
-  const formattedDate = newDate.toLocaleString("es-ES", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  });
-  resources.alerts.unshift({
-    alert: "Fuel Tank Level is low",
-    value: 0,
-    name: "fueltanklevel",
-    date: formattedDate,
-    id: resources.alerts.length,
-  });
-  res.status(200).json(`The vehicle's tank is empty.`);
-});
+  getMode();
 
-router.route("/actions/drainbattery").post(function (req, res, next) {
-  if (resources.sensors.length > 1) {
-    resources.sensors[1] = { ...resources.sensors[1], value: 0, active: false };
+  if (isEmpty) {
+    resources.alerts.unshift({
+      alert: alertMsg,
+      value: sendValue,
+      name: id,
+      date: getCurrentDateToString(),
+      id: resources.alerts.length,
+    });
   }
-  const newDate = new Date();
-  const formattedDate = newDate.toLocaleString("es-ES", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-  });
-  resources.alerts.unshift({
-    alert: "Battery Charge Level is low",
-    value: 0,
-    name: "batterychargelevel",
-    date: formattedDate,
-    id: resources.alerts.length,
-  });
-  res.status(200).json(`The vehicle's battery is discharged.`);
+
+  // Update the sensor value
+  mqtt.publish(
+    `hybridenginecontrol/sensors/${id}`,
+    JSON.stringify({ id: id, value: sendValue, notify: isNotify })
+  );
+
+  // Update the mode value
+  mqtt.publish(
+    `hybridenginecontrol/mode`,
+    JSON.stringify({ mode: resources.mode })
+  );
+  res.status(200).json("Sensor updated successfully.");
 });
 
 router.route("/actions/history").get(function (req, res, next) {
@@ -66,7 +83,12 @@ router.route("/actions/history").get(function (req, res, next) {
 
 router.route("/actions/history/:id").delete(function (req, res, next) {
   const id = req.params.id;
-  const newAlerts = resources.alerts.filters((alert) => alert.id !== id);
+  console.log("id", id);
+  console.log("resources.alerts", resources.alerts);
+  const newAlerts = resources.alerts.filter(
+    (alert) => alert.id !== parseInt(id)
+  );
+  console.log("newAlerts", newAlerts);
   resources.alerts = newAlerts;
   res.status(200).json("Alert deleted successfully.");
 });

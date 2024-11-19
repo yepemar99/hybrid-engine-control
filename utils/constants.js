@@ -7,4 +7,4 @@ const basicStats = {
   LOW_BATTERY_FUEL_CHARGE: 20,
 };
 
-module.exports = basicStats;
+module.exports = { basicStats };
