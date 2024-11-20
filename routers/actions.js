@@ -3,6 +3,7 @@ var express = require("express"),
 mqtt = require("../MQTTWebSockets");
 var resources = require("../resources/model");
 const { getMode, getCurrentDateToString } = require("../utils/functions");
+const { v4: uuidv4 } = require("uuid");
 
 const actionsSensors = {
   fueltanklevel: "fueltanklevel",
@@ -13,7 +14,6 @@ const actionsSensors = {
 
 router.route("/actions/power").post(function (req, res, next) {
   var { value } = req.body;
-  console.log("valor", value);
   resources.status = value;
   res.status(200).json(`Vehicle is ${resources.status ? "On" : "Off"}`);
 });
@@ -57,7 +57,7 @@ router.route("/actions/sensors/:id").post(function (req, res, next) {
       value: sendValue,
       name: id,
       date: getCurrentDateToString(),
-      id: resources.alerts.length,
+      id: uuidv4(),
     });
   }
 
@@ -85,9 +85,7 @@ router.route("/actions/history/:id").delete(function (req, res, next) {
   const id = req.params.id;
   console.log("id", id);
   console.log("resources.alerts", resources.alerts);
-  const newAlerts = resources.alerts.filter(
-    (alert) => alert.id !== parseInt(id)
-  );
+  const newAlerts = resources.alerts.filter((alert) => alert.id !== id);
   console.log("newAlerts", newAlerts);
   resources.alerts = newAlerts;
   res.status(200).json("Alert deleted successfully.");

@@ -4,6 +4,7 @@ mqtt = require("../MQTTWebSockets");
 var resources = require("../resources/model");
 const { basicStats } = require("../utils/constants");
 const { getMode, getCurrentDateToString } = require("../utils/functions");
+const { v4: uuidv4 } = require("uuid");
 
 router.route("/sensors/:id").post(function (req, res, next) {
   var { value } = req.body;
@@ -14,9 +15,6 @@ router.route("/sensors/:id").post(function (req, res, next) {
     (sensor) => sensor.id === id
   );
 
-  // If the sensor is not active, the value is not updated
-  console.log("status", resources.status);
-  console.log("active", resources.sensors[findIndexSensor].active);
   let sendValue =
     !resources.status || !resources.sensors[findIndexSensor].active
       ? resources.sensors[findIndexSensor].value
@@ -27,7 +25,6 @@ router.route("/sensors/:id").post(function (req, res, next) {
 
   let isNotify = false;
 
-  // Alert if the fuel tank level or battery charge level is low
   if (
     ((id === "fueltanklevel" && sendValue < basicStats.LOW_FUEL_TANK_LEVEL) ||
       (id === "batterychargelevel" &&
@@ -39,23 +36,17 @@ router.route("/sensors/:id").post(function (req, res, next) {
       resources.alerts.length > 0
         ? resources.alerts[resources.alerts.length - 1]
         : null;
-    if (
-      !findLastAlert ||
-      (findLastAlert &&
-        findLastAlert.name !== id &&
-        findLastAlert.value !== sendValue)
-    )
-      resources.alerts.unshift({
-        alert:
-          id === "fueltanklevel"
-            ? "Fuel Tank Level is low"
-            : "Battery Charge Level is low",
-        value: sendValue,
-        name: id,
-        date: getCurrentDateToString(),
-        id: resources.alerts.length,
-      });
-    isNotify = resources.sensors[findIndexSensor].active;
+
+    resources.alerts.unshift({
+      alert:
+        id === "fueltanklevel"
+          ? "Fuel Tank Level is low"
+          : "Battery Charge Level is low",
+      value: sendValue,
+      name: id,
+      date: getCurrentDateToString(),
+      id: uuidv4(),
+    });
   } else {
     isNotify = false;
   }
