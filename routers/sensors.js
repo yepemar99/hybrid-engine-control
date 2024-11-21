@@ -18,7 +18,12 @@ router.route("/sensors/:id").post(function (req, res, next) {
   let sendValue =
     !resources.status || !resources.sensors[findIndexSensor].active
       ? resources.sensors[findIndexSensor].value
-      : value;
+      : (resources.sensors[findIndexSensor].id === "speed" ||
+            resources.sensors[findIndexSensor].id === "power") &&
+          resources.sensors[0].value === 0 &&
+          resources.sensors[1].value === 0
+        ? 0
+        : value;
 
   resources.sensors[findIndexSensor].value = sendValue;
   getMode();

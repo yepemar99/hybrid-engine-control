@@ -83,10 +83,7 @@ router.route("/actions/history").get(function (req, res, next) {
 
 router.route("/actions/history/:id").delete(function (req, res, next) {
   const id = req.params.id;
-  console.log("id", id);
-  console.log("resources.alerts", resources.alerts);
   const newAlerts = resources.alerts.filter((alert) => alert.id !== id);
-  console.log("newAlerts", newAlerts);
   resources.alerts = newAlerts;
   res.status(200).json("Alert deleted successfully.");
 });
